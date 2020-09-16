@@ -1,0 +1,5 @@
+mdvl-pdfscissors (1.0.0) stable; urgency=medium
+
+  * Package created with MDPC 2
+
+ -- Linux-Fan, Ma_Sys.ma <Ma_Sys.ma@web.de>  Thu, 17 Sep 2020 00:15:41 +0200
