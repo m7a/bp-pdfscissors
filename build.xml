@@ -33,7 +33,7 @@ License: AGPL
  Note: The AGPL is available under /usr/share/doc/mdvl-pdfscissors/agpl-3.0.txt.
 </property>
 <property name="mdpc.file.install">
-pdfscissors.jar /usr/share/java
+build_pdfscissors/deploy/pdfscissors.jar /usr/share/java
 pdfscissors /usr/bin
 agpl-3.0.txt /usr/share/doc/mdvl-pdfscissors
 </property>
@@ -45,16 +45,14 @@ agpl-3.0.txt /usr/share/doc/mdvl-pdfscissors
 
 <!-- SPECIFIC BUILD -->
 <target name="download">
-	<masysma_require_artifact masysmaaction="require"
-		masysmaartifact="pdfscissors.jar"
-		masysmaatarget="https://sites.google.com/site/pdfscissors/pdfscissors.jar"
-		masysmaadef="pdfscissors.jar"/>
-	<copy tofile="pdfscissors.jar"
-		file="${masysma.internal.includepath}/x-artifacts/pdfscissors.jar"/>
+	<masysma_require_artifact
+		masysmaartifact="pdfscissors.git"
+		masysmaatarget="build_pdfscissors"
+		masysmaadef="https://github.com/abdullah-mazed/pdfscissors"/>
 </target>
 
 <target name="build" depends="download"/>
-<target name="clean"><delete file="pdfscissors.jar"/></target>
+<target name="clean"><delete dir="build_pdfscissors"/></target>
 
 <!-- CI INTEGRATION -->
 <target name="package_triggered" depends="package">

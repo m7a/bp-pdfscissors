@@ -1,3 +1,9 @@
+mdvl-pdfscissors (1.0.1) stable; urgency=medium
+
+  * Update to git version (newer).
+
+ -- Ma_Sys.ma Linux-Fan <Ma_Sys.ma@web.de>  Sun, 05 Jun 2022 21:32:21 +0200
+
 mdvl-pdfscissors (1.0.0) stable; urgency=medium
 
   * Package created with MDPC 2
